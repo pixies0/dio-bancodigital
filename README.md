@@ -1,18 +1,61 @@
-## Getting Started
+# 🏦 Desafio Banco Digital (DIO)
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Descrição
 
-## Folder Structure
+Aplicação em Java que simula um sistema bancário digital com contas Corrente e Poupança. O sistema permite:
 
-The workspace contains two folders by default, where:
+Cadastro de clientes e abertura de contas;
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Operações financeiras: depósito, saque e transferência entre contas.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+A implementação reforça os 4 pilares da Orientação a Objetos.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Estrutura do Projeto
 
-## Dependency Management
+```src/``` — Código-fonte Java, incluindo classes como Cliente, Conta (classe abstrata ou interface IConta), ContaCorrente, ContaPoupanca e Banco como gerenciador central.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+```Main.java``` — Classe principal com fluxo de interação no terminal.
+
+Uso de coleções ```(ArrayList)``` para armazenar clientes e contas.
+
+## Principais Funcionalidades
+
+* Criar clientes com dados básicos (nome, CPF);
+
+* Abrir conta corrente ou poupança;
+
+* Realizar depósitos, saques e transferências;
+
+* Consultar saldo e extrato;
+
+* (Opcional) Aplicação de juros em poupança ou uso de limite em conta corrente.
+
+## Pilares da Programação Orientada a Objetos
+
+1. Abstração
+
+A classe Conta representa o conceito genérico de conta bancária, enquanto ContaCorrente e ContaPoupanca implementam funcionalidades específicas.
+
+2. Encapsulamento
+
+Atributos como saldo, agência e número são privados, com métodos públicos (depositar, sacar, transferir) garantindo integridade dos dados.
+
+3. Herança
+
+ContaCorrente e ContaPoupanca estendem a classe Conta ou implementam IConta, aproveitando comportamento comum e especializando métodos.
+
+4. Polimorfismo
+
+Operações são feitas por referência à interface ou classe abstrata, permitindo que métodos funcionem para diferentes tipos de conta sem alteração no código.
+
+# Melhorias Futuras
+
+* Validação e formatação de CPF;
+
+* Registro de transações em uma classe dedicada;
+
+* Funcionalidades adicionais como investimentos e limites de crédito.
+
+## Conclusão
+
+Este repositório segue o desafio da DIO para criar um sistema bancário em Java, aplicando de forma prática os conceitos de abstração, encapsulamento, herança e polimorfismo em um projeto real.
